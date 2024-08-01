@@ -1,7 +1,9 @@
 import User from "./User";
+import ProductListing from "./ProductListing";
+import UserTwo from "./UserTwo";
 function App() {
   return (
-    <div className="App">
+    <>
       <div className="testClass">Welcome {formatName(user)}</div>
       {console.log("helooo")}
       {/** the below component render line wont be visible in react devtools */}
@@ -10,7 +12,9 @@ function App() {
       <User name={formatName(user)} />
       <User name={formatName(user)} />
       <User></User>
-    </div>
+
+      <UserTwo {...user} />
+    </>
   );
 }
 function formatName(user) {
@@ -18,7 +22,7 @@ function formatName(user) {
 }
 
 const user = {
-  firstName: "Harper",
-  lastName: "Perez",
+  firstName: "Raghav",
+  lastName: "Gundali",
 };
 export default App;
